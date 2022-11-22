@@ -1,8 +1,7 @@
 package view;
 
 import java.io.File;
-
-
+import view.Test;
 /**
  *
  * @author acer
@@ -59,7 +58,16 @@ public class preview extends javax.swing.JFrame {
         home_btn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         home_btn.setText("Karyakam");
         home_btn.setBorder(null);
-        home_btn.setContentAreaFilled(false);
+        home_btn.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                home_btnFocusGained(evt);
+            }
+        });
+        home_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home_btnActionPerformed(evt);
+            }
+        });
         getContentPane().add(home_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagespath/karayakam.png"))); // NOI18N
@@ -185,16 +193,27 @@ public class preview extends javax.swing.JFrame {
 
     private void resourcesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resourcesActionPerformed
         // TODO add your handling code here:
+        new Test();
     }//GEN-LAST:event_resourcesActionPerformed
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
         // TODO add your handling code here:
-        test = new Test();
+        
     }//GEN-LAST:event_registerActionPerformed
 
     private void servicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_servicesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_servicesActionPerformed
+
+    private void home_btnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_home_btnFocusGained
+        // TODO add your handling code here:
+        // home_btn.setSize(getPreferredSize());
+        
+    }//GEN-LAST:event_home_btnFocusGained
+
+    private void home_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_home_btnActionPerformed
 
     /**
      * @param args the command line arguments
