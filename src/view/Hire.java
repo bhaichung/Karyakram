@@ -93,7 +93,7 @@ public class Hire extends javax.swing.JFrame {
                 .addComponent(jButton3)
                 .addGap(107, 107, 107)
                 .addComponent(jButton4)
-                .addGap(0, 191, Short.MAX_VALUE))
+                .addGap(0, 189, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
