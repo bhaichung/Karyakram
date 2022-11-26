@@ -8,7 +8,7 @@ import view.Test;
  */
 public class preview extends javax.swing.JFrame {
 
-    private Test test;
+//    private Test test;
     /** Creates new form preview */
     public preview() {
         initComponents();
@@ -193,12 +193,12 @@ public class preview extends javax.swing.JFrame {
 
     private void resourcesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resourcesActionPerformed
         // TODO add your handling code here:
-        new Test();
+ 
     }//GEN-LAST:event_resourcesActionPerformed
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
         // TODO add your handling code here:
-        
+              new Register().setVisible(true);
     }//GEN-LAST:event_registerActionPerformed
 
     private void servicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_servicesActionPerformed
