@@ -7,8 +7,6 @@ package view;
 import controller.CustomerController;
 import java.util.Objects;
 import javax.swing.JOptionPane;
-import java.awt.event.WindowEvent;
-import java.awt.Toolkit;
 
 /**
  *
@@ -43,7 +41,7 @@ public class Login extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Wellcome Back! Please enter your credentials");
@@ -174,37 +172,29 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_tfEmailActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    close();
     String email = tfEmail.getText();
     String password = tfPassword.getText();
         CustomerController cc = new CustomerController();
     Boolean isLogin = cc.loginUser(email, password);
     if(Objects.equals(Boolean.TRUE, isLogin)){
         //yetabata vopygarne
-        new userDashboard().setVisible(true);
+        new forgetPassword().setVisible(true);
     } else {
         JOptionPane.showMessageDialog(this,"Either email or password is invalid","Error" ,JOptionPane.ERROR_MESSAGE);
     }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-    // function to close window
-    public void close(){
-        WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
-        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
-    }
+
     private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        close();
-        new Register().setVisible(true);        // TODO add your handling code here:
+     new Register().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        close();
-        forgetPassword jButton3 = new forgetPassword();
-        jButton3.setVisible(true);// add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
