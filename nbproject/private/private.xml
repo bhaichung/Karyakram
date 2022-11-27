@@ -3,12 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/forgetPassword.java</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/advPayement.java</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/Group%2013.png</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/userDashboard.java</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/advancePayement.java</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/payement.java</file>
+=======
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/forgetPassword.java</file>
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/Hire.java</file>
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/Register.java</file>
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/Login.java</file>
+>>>>>>> 3dd08c887b9903b11b5869b81801de5fb7da3eb3
         </group>
     </open-files>
 </project-private>

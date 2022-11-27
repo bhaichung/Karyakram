@@ -10,8 +10,9 @@ package view;
  */
 public class payement extends javax.swing.JFrame {
 
-   
-     
+    /**
+     * Creates new form payement
+     */
     public payement() {
         initComponents();
     }
@@ -31,7 +32,7 @@ public class payement extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
