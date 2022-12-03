@@ -34,12 +34,21 @@ public class forgetPassword extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -47,6 +56,10 @@ public class forgetPassword extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(102, 102, 255));
         jLabel1.setText("Forget Password");
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("New Password");
 
@@ -74,11 +87,20 @@ public class forgetPassword extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
@@ -94,10 +116,20 @@ public class forgetPassword extends javax.swing.JFrame {
                         .addGap(140, 140, 140)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(18, Short.MAX_VALUE))
+<<<<<<< HEAD
+=======
+=======
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1)
                 .addGap(118, 118, 118)
@@ -109,24 +141,63 @@ public class forgetPassword extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
+=======
+<<<<<<< HEAD
+                .addGap(21, 21, 21)
+                .addComponent(jLabel1)
+                .addGap(81, 81, 81)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(16, 16, 16))
+<<<<<<< HEAD
+=======
+=======
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+<<<<<<< HEAD
         close();
         new Login().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+=======
+new Login().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+=======
+>>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
     /**
      * @param args the command line arguments
      */
@@ -163,8 +234,16 @@ public class forgetPassword extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+=======
+<<<<<<< HEAD
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+=======
+>>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
