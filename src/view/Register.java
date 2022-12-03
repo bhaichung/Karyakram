@@ -376,7 +376,8 @@ public class Register extends javax.swing.JFrame {
           lText.getText(),
           eText.getText(),
           cText.getText(),
-          new String(pText.getPassword())
+          new String(pText.getPassword()
+          sText.getText(),)
         );
         UserController uc = new UserController();
         int result = uc.insertDetails(u1);

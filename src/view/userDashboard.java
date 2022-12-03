@@ -163,11 +163,10 @@ new Login().setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-<<<<<<< HEAD
+ 
 new Register().setVisible(true);        // TODO add your handling code here:
-=======
-new Register().setVisible(true);       // TODO add your handling code here:
->>>>>>> 3dd08c887b9903b11b5869b81801de5fb7da3eb3
+
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
