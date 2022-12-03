@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/advPayement.java</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/Group%2013.png</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/userDashboard.java</file>
@@ -11,6 +12,16 @@
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/PhotoPreview.java</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/payement.java</file>
             <file>file:/C:/Users/acer/Desktop/karyakram/src/view/Hire.java</file>
+=======
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/forgetPassword.java</file>
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/Hire.java</file>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/Notifications.java</file>
+=======
+>>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/Register.java</file>
+            <file>file:/C:/Users/Sandeep/Desktop/karyakram/src/view/Login.java</file>
+>>>>>>> 9dcacdbc44e895ac78d37929ee38eadf3998f507
         </group>
     </open-files>
 </project-private>
