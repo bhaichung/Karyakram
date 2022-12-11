@@ -185,6 +185,7 @@ public class Login extends javax.swing.JFrame {
     } else {
         JOptionPane.showMessageDialog(this,"Either email or password is invalid","Error" ,JOptionPane.ERROR_MESSAGE);
     }
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
     // function to close window

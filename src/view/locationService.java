@@ -175,25 +175,25 @@ public class locationService extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }                                        
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }                                        
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }                                        
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         new Register().setVisible(true);       // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }                                        
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 new preview().setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }                                        
 
     /**
      * @param args the command line arguments
@@ -397,27 +397,27 @@ new preview().setVisible(true);        // TODO add your handling code here:
       );
 
     pack();
-  } // </editor-fold>//GEN-END:initComponents
+  } // </editor-fold>                        
 
-  private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) { //GEN-FIRST:event_jButton2ActionPerformed
+  private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     // TODO add your handling code here:
-  } //GEN-LAST:event_jButton2ActionPerformed
+  }//GEN-LAST:event_jButton2ActionPerformed
 
-  private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) { //GEN-FIRST:event_jButton3ActionPerformed
+  private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
     // TODO add your handling code here:
-  } //GEN-LAST:event_jButton3ActionPerformed
+  }//GEN-LAST:event_jButton3ActionPerformed
 
-  private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) { //GEN-FIRST:event_jButton4ActionPerformed
+  private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
     // TODO add your handling code here:
-  } //GEN-LAST:event_jButton4ActionPerformed
+  }//GEN-LAST:event_jButton4ActionPerformed
 
-  private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) { //GEN-FIRST:event_jButton6ActionPerformed
+  private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
     new Register().setVisible(true); // TODO add your handling code here:
-  } //GEN-LAST:event_jButton6ActionPerformed
+  }//GEN-LAST:event_jButton6ActionPerformed
 
-  private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) { //GEN-FIRST:event_jButton1ActionPerformed
+  private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     new preview().setVisible(true); // TODO add your handling code here:
-  } //GEN-LAST:event_jButton1ActionPerformed
+  }//GEN-LAST:event_jButton1ActionPerformed
 
   /**
    * @param args the command line arguments
@@ -454,7 +454,7 @@ new preview().setVisible(true);        // TODO add your handling code here:
     }
     //</editor-fold>
 
-<<<<<<< HEAD
+
     /* Create and display the form */
     java.awt.EventQueue.invokeLater(
       new Runnable() {
@@ -465,7 +465,7 @@ new preview().setVisible(true);        // TODO add your handling code here:
     );
   }
 
-  // Variables declaration - do not modify//GEN-BEGIN:variables
+  // Variables declaration - do not modify                     
   private javax.swing.JButton jButton1;
   private javax.swing.JButton jButton2;
   private javax.swing.JButton jButton3;
@@ -482,8 +482,8 @@ new preview().setVisible(true);        // TODO add your handling code here:
   private javax.swing.JLabel jLabel7;
   private javax.swing.JLabel jLabel8;
   private javax.swing.JLabel jLabel9;
-  // End of variables declaration//GEN-END:variables
-=======
+  // End of variables declaration                   
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -502,5 +502,5 @@ new preview().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
+
 }

@@ -62,4 +62,3 @@ public class Customer {
     this.customer_phone = customer_phone;
   }
 }
-}
