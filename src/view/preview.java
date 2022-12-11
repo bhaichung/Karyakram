@@ -26,11 +26,7 @@ public class preview extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         home_btn = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
-        resources = new javax.swing.JButton();
-        register = new javax.swing.JButton();
-        services = new javax.swing.JButton();
-        what_we_do = new javax.swing.JButton();
-        navigation_bar = new javax.swing.JLabel();
+        karyakram = new javax.swing.JButton();
         img = new javax.swing.JLabel();
         img1 = new javax.swing.JLabel();
         img2 = new javax.swing.JLabel();
@@ -45,6 +41,10 @@ public class preview extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        karyakram1 = new javax.swing.JButton();
+        karyakram2 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        navigation_bar = new javax.swing.JLabel();
         main_frame = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,8 +55,8 @@ public class preview extends javax.swing.JFrame {
         jLabel1.setText("GALLERY");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, 200, 70));
 
-        home_btn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        home_btn.setText("Karyakam");
+        home_btn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        home_btn.setText("What we do");
         home_btn.setBorder(null);
         home_btn.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -68,57 +68,25 @@ public class preview extends javax.swing.JFrame {
                 home_btnActionPerformed(evt);
             }
         });
-        getContentPane().add(home_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+        getContentPane().add(home_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 30, 160, 40));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagespath/karayakam.png"))); // NOI18N
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 100));
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, -1));
 
-        resources.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        resources.setText("Resources");
-        resources.setBorder(null);
-        resources.setContentAreaFilled(false);
-        resources.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resourcesActionPerformed(evt);
+        karyakram.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        karyakram.setText("Resources");
+        karyakram.setBorder(null);
+        karyakram.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                karyakramFocusGained(evt);
             }
         });
-        getContentPane().add(resources, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 40, -1, -1));
-
-        register.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        register.setForeground(new java.awt.Color(102, 102, 255));
-        register.setText("Register");
-        register.addActionListener(new java.awt.event.ActionListener() {
+        karyakram.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerActionPerformed(evt);
+                karyakramActionPerformed(evt);
             }
         });
-        getContentPane().add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 40, 130, -1));
-
-        services.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        services.setText("Services");
-        services.setBorder(null);
-        services.setContentAreaFilled(false);
-        services.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                servicesActionPerformed(evt);
-            }
-        });
-        getContentPane().add(services, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 40, -1, -1));
-
-        what_we_do.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        what_we_do.setText("What We do");
-        what_we_do.setBorder(null);
-        what_we_do.setContentAreaFilled(false);
-        what_we_do.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                what_we_doActionPerformed(evt);
-            }
-        });
-        getContentPane().add(what_we_do, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, -1, -1));
-
-        navigation_bar.setBackground(new java.awt.Color(255, 255, 255));
-        navigation_bar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        getContentPane().add(navigation_bar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 100));
+        getContentPane().add(karyakram, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 30, 130, 40));
 
         img.setBackground(new java.awt.Color(255, 255, 255));
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagespath/image1 1.png"))); // NOI18N
@@ -182,28 +150,56 @@ public class preview extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("MARRIAGE");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 660, -1, -1));
+
+        karyakram1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        karyakram1.setText("Karyakam");
+        karyakram1.setBorder(null);
+        karyakram1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                karyakram1FocusGained(evt);
+            }
+        });
+        karyakram1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                karyakram1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(karyakram1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 130, 40));
+
+        karyakram2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        karyakram2.setText("Services");
+        karyakram2.setBorder(null);
+        karyakram2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                karyakram2FocusGained(evt);
+            }
+        });
+        karyakram2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                karyakram2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(karyakram2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 130, 40));
+
+        jButton6.setBackground(new java.awt.Color(242, 242, 242));
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(102, 102, 255));
+        jButton6.setText("Register");
+        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 255), 2));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 20, 150, 50));
+
+        navigation_bar.setBackground(new java.awt.Color(255, 255, 255));
+        navigation_bar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(navigation_bar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 113));
         getContentPane().add(main_frame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void what_we_doActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_what_we_doActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_what_we_doActionPerformed
-
-    private void resourcesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resourcesActionPerformed
-        // TODO add your handling code here:
- 
-    }//GEN-LAST:event_resourcesActionPerformed
-
-    private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
-        // TODO add your handling code here:
-              new Register().setVisible(true);
-    }//GEN-LAST:event_registerActionPerformed
-
-    private void servicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_servicesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_servicesActionPerformed
 
     private void home_btnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_home_btnFocusGained
         // TODO add your handling code here:
@@ -214,6 +210,34 @@ public class preview extends javax.swing.JFrame {
     private void home_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home_btnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_home_btnActionPerformed
+
+    private void karyakramFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_karyakramFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_karyakramFocusGained
+
+    private void karyakramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_karyakramActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_karyakramActionPerformed
+
+    private void karyakram1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_karyakram1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_karyakram1FocusGained
+
+    private void karyakram1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_karyakram1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_karyakram1ActionPerformed
+
+    private void karyakram2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_karyakram2FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_karyakram2FocusGained
+
+    private void karyakram2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_karyakram2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_karyakram2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        new Register().setVisible(true);       // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -259,6 +283,7 @@ public class preview extends javax.swing.JFrame {
     private javax.swing.JLabel img4;
     private javax.swing.JLabel img6;
     private javax.swing.JLabel img7;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -267,13 +292,12 @@ public class preview extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton karyakram;
+    private javax.swing.JButton karyakram1;
+    private javax.swing.JButton karyakram2;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel main_frame;
     private javax.swing.JLabel navigation_bar;
-    private javax.swing.JButton register;
-    private javax.swing.JButton resources;
-    private javax.swing.JButton services;
-    private javax.swing.JButton what_we_do;
     // End of variables declaration//GEN-END:variables
 
 }
