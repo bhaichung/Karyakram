@@ -42,7 +42,6 @@ public class locationService extends javax.swing.JFrame {
     jLabel9 = new javax.swing.JLabel();
     jLabel10 = new javax.swing.JLabel();
 
-<<<<<<< HEAD
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -53,7 +52,7 @@ public class locationService extends javax.swing.JFrame {
       new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
           jButton2ActionPerformed(evt);
-=======
+
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -219,7 +218,6 @@ new preview().setVisible(true);        // TODO add your handling code here:
             java.util.logging.Logger.getLogger(locationService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(locationService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         }
       }
     );
