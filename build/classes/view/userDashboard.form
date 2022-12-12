@@ -36,10 +36,14 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Group type="102" alignment="0" attributes="0">
               <Component id="Userdashboard" pref="762" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
+=======
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+>>>>>>> 9348298c8f5aa38697e26fe0ff5be95d4cec49c6
       </Group>
     </DimensionLayout>
   </Layout>
