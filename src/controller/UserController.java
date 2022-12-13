@@ -80,4 +80,12 @@ public class UserController {
         int result = dbConnection.manipulate(insertQuery);
         return result;
     }
+    public int updateFeedback(User user){
+        String email = user.getUser_email();
+        String feedback = user.getUser_feedback();
+        String updateFeedback = "update User set feedback='"+feedback+"'where email='"+email+"'";
+        dbConnection =  new DbConnection();
+        int result = dbConnection.manipulate(updateFeedback);
+        return result;
+    }
 }

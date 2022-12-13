@@ -7,6 +7,7 @@ public class User {
     private String user_phone;
     private String user_password;
     private String user_sq;
+    private String user_feedback;
 
     public String getUser_fname() {
         return this.user_fname;
@@ -56,6 +57,12 @@ public class User {
         this.user_sq = user_sq;
 
     }
+    public String getUser_feedback(){
+        return this.user_feedback;
+    }
+    public void setUser_feedback(String user_feedback){
+        this.user_feedback = user_feedback;
+    }
 
 
     public User(String user_fname,
@@ -63,13 +70,16 @@ public class User {
     String user_email,
     String user_phone,
     String user_password,
-    String user_sq){
+    String user_sq,
+    String user_feedback){
         this.user_fname=user_fname;
         this.user_lname=user_lname;
         this.user_email = user_email;
         this.user_phone = user_phone;
         this.user_password = user_password;
         this.user_sq =user_sq;
+        this.user_feedback = user_feedback;
+
     }
 
     
