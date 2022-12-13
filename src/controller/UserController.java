@@ -1,5 +1,7 @@
 package controller;
 
+import java.sql.ResultSet;
+
 import database.DbConnection;
 import models.User;
 
@@ -17,7 +19,6 @@ public class UserController {
         dbConnection = new DbConnection();
         return dbConnection.manipulate(insertQuery);
     }
-<<<<<<< HEAD
     public int reset(User user){
         String sq = user.getUser_sq();
         String pass = user.getUser_password();
@@ -28,22 +29,55 @@ public class UserController {
         return result;
     }
 
+    public ResultSet selectDetails(){
+        String query = "select fname,lname,password from User where status='"+"active"+"' ";
+        dbConnection = new DbConnection();
+        ResultSet rs = dbConnection.retrieve(query);
+        return rs;
+    }
+
+    public ResultSet loginDetails(User user){
+        String email = user.getUser_email();
+        String pass = user.getUser_password();
+        String query = "select * from User where email='"+email+"' and password='"+pass+"'";
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(query);
+        return result;
+    }
+
+    public int changeStatus(User user){
+        String query = "update User set status='"+"inactive"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(query);
+        return result;
 
 
-=======
+
+    }
+    public int updateStatus(User user){
+        String email = user.getUser_email();
+        String query = "update User set status='"+"active"+"' where email='"+email+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(query);
+        return result;
+
+
+
+    }
+
+    
+    
+
     public int updatedetails(User user) {
         String fname = user.getUser_fname();
         String lname = user.getUser_lname();
-        String email = user.getUser_email();
-        String phone = user.getUser_phone();
         String pass = user.getUser_password();
-        String sq =user.getUser_sq();
+        
 
-        String insertQuery = "update User set user_fname='" + fname + "',user_lname='" + lname
-                + "',user_contact='" + phone + "',user_userName='" + username + "',user_email='"+email+"',user_pass='"+pass+"',user_dob='"+dob+"',gender='"+gender+"' where user_status=1";
+        String insertQuery = "update User set fname='" + fname + "',lname='" + lname
+                + "',password='"+pass+"' where status='"+"active"+"'";
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(insertQuery);
         return result;
     }
->>>>>>> 9348298c8f5aa38697e26fe0ff5be95d4cec49c6
 }

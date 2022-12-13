@@ -112,7 +112,7 @@ public class forgetPassword extends javax.swing.JFrame {
                     dispose();
                     new Login().setVisible(true);
                 }else{
-                    JOptionPane.(this, "Please enter correct security question answer");
+                    JOptionPane.showMessageDialog(this, "Please enter correct security question answer");
                 }
         }
     }//GEN-LAST:event_submitButtonActionPerformed

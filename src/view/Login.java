@@ -5,9 +5,15 @@
 package view;
 
 import controller.CustomerController;
+import controller.UserController;
+import models.User;
+
 import java.util.Objects;
 import javax.swing.JOptionPane;
 import java.awt.event.WindowEvent;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.awt.HeadlessException;
 import java.awt.Toolkit;
 
 /**
@@ -176,14 +182,30 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     close();
     String email = tfEmail.getText();
-    String password = tfPassword.getText();
-        CustomerController cc = new CustomerController();
-    Boolean isLogin = cc.loginUser(email, password);
-    if(Objects.equals(Boolean.TRUE, isLogin)){
-        //yetabata vopygarne
-        new userDashboard().setVisible(true);
-    } else {
-        JOptionPane.showMessageDialog(this,"Either email or password is invalid","Error" ,JOptionPane.ERROR_MESSAGE);
+    String password = new String(tfPassword.getPassword());
+        
+    User u1 = new User(null,null,email,null,password,null);
+    UserController uc = new UserController();
+    ResultSet rs = uc.loginDetails(u1);
+    
+    try {
+        if(rs.next()){
+            JOptionPane.showMessageDialog(this, "Login Success");
+            uc.changeStatus(u1);
+            uc.updateStatus(u1);
+            dispose();
+            //yetabata vopygarne
+            new userDashboardLoggedIn().setVisible(true);
+        
+        } else {
+            JOptionPane.showMessageDialog(this,"Either email or password is invalid","Error" ,JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (HeadlessException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    } catch (SQLException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
     }
 
 // TODO add your handling code here:
