@@ -177,7 +177,7 @@ public class Edit extends javax.swing.JFrame {
                String passwordString = password.getText();
                String repasswordString = repass.getText();
 
-               User u1 = new User(fnameString, lnameString, null, null, passwordString, repasswordString);
+               User u1 = new User(fnameString, lnameString, null, null, passwordString, repasswordString,null,null,null,null);
                UserController uc = new UserController();
                int result = uc.updatedetails(u1);
                if(result>0){

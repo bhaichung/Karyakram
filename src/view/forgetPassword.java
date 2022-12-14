@@ -104,7 +104,7 @@ public class forgetPassword extends javax.swing.JFrame {
         }
         else{
 
-            User u1 = new User(null,null,null, null, pass,sq);
+            User u1 = new User(null,null,null, null, pass,sq,null,null,null,null);
                 UserController uc = new UserController();
                 int result = uc.reset(u1);
                 if(result>0){

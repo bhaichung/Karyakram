@@ -109,8 +109,10 @@ public class userDashboardLoggedIn extends javax.swing.JFrame {
         jButton5.setBorder(null);
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 130, 40));
 
+        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(102, 102, 255));
         jButton7.setText("Profile");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 40, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 30, 150, 50));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 204));
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));

@@ -184,7 +184,7 @@ public class Login extends javax.swing.JFrame {
     String email = tfEmail.getText();
     String password = new String(tfPassword.getPassword());
         
-    User u1 = new User(null,null,email,null,password,null);
+    User u1 = new User(null,null,email,null,password,null,null,null,null,null);
     UserController uc = new UserController();
     ResultSet rs = uc.loginDetails(u1);
     
@@ -193,6 +193,7 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Login Success");
             uc.changeStatus(u1);
             uc.updateStatus(u1);
+            uc.notification(u1);
             dispose();
             //yetabata vopygarne
             new userDashboardLoggedIn().setVisible(true);

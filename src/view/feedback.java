@@ -3,7 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
+import java.sql.ResultSet;
+
 import javax.swing.JOptionPane;
+
+import controller.UserController;
+import models.User;
 
 /**
  *
@@ -28,22 +33,22 @@ public class feedback extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        tfFeedback = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        sumbit = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tfFeedback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tfFeedbackActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 234, 62));
+        jPanel1.add(tfFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 234, 62));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 102, 255));
@@ -54,15 +59,15 @@ public class feedback extends javax.swing.JFrame {
         jLabel2.setText("Give a feedback:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 234, -1));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 102, 255));
-        jButton1.setText("SUBMIT");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        sumbit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        sumbit.setForeground(new java.awt.Color(102, 102, 255));
+        sumbit.setText("SUBMIT");
+        sumbit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                sumbitActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+        jPanel1.add(sumbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 210, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -81,16 +86,21 @@ public class feedback extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void sumbitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumbitActionPerformed
 //        noti1.setText("You have logged in sucessfully.");
-        JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
+String feedback = tfFeedback.getText();
+User u1 = new User(null,null,null,null,null,null,feedback,null,null,null);
+UserController uc = new UserController();
+int rs = uc.updateFeedback(u1);        
+JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
+
         dispose(); 
 // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_sumbitActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tfFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfFeedbackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tfFeedbackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,11 +138,11 @@ public class feedback extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton sumbit;
+    private javax.swing.JTextField tfFeedback;
     // End of variables declaration//GEN-END:variables
 }
