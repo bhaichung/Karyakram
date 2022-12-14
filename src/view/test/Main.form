@@ -41,9 +41,13 @@
         </Property>
       </Properties>
 
+<<<<<<< HEAD
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
       </Layout>
+=======
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+>>>>>>> 0650bad33c86a975a0b17d50840299ca7f0451e6
     </Container>
   </SubComponents>
 </Form>
