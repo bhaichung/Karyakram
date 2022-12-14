@@ -81,11 +81,26 @@ public class UserController {
         return result;
     }
     public int updateFeedback(User user){
-        String email = user.getUser_email();
         String feedback = user.getUser_feedback();
-        String updateFeedback = "update User set feedback='"+feedback+"'where email='"+email+"'";
+        String updateFeedbacks = "update User set feedback='"+feedback+"'where status='"+"active"+"'";
         dbConnection =  new DbConnection();
-        int result = dbConnection.manipulate(updateFeedback);
+        int result = dbConnection.manipulate(updateFeedbacks);
         return result;
     }
+    public int notification(User user){
+        String notificationQuery = "update User set notification='"+"You have Sucessfully Loggged In"+"' where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(notificationQuery);
+        return result;
+    }
+
+    public ResultSet getNotification(){
+        String selectQuery = "select notification,advancePayement,remaningPayement from User where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(selectQuery);
+        return result;
+    }
+
+
+    
 }

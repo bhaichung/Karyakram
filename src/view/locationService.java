@@ -26,7 +26,6 @@ public class locationService extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -38,8 +37,6 @@ public class locationService extends javax.swing.JFrame {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
           jButton2ActionPerformed(evt);
 
-=======
->>>>>>> 9348298c8f5aa38697e26fe0ff5be95d4cec49c6
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -207,6 +204,7 @@ new preview().setVisible(true);        // TODO add your handling code here:
             java.util.logging.Logger.getLogger(locationService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
       }
+      
     );
     getContentPane()
       .add(
@@ -382,7 +380,7 @@ new preview().setVisible(true);        // TODO add your handling code here:
       );
 
     pack();
-  } // </editor-fold>                        
+     }// </editor-fold>                        
 
   private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     // TODO add your handling code here:
@@ -468,11 +466,6 @@ new preview().setVisible(true);        // TODO add your handling code here:
   private javax.swing.JLabel jLabel8;
   private javax.swing.JLabel jLabel9;
   // End of variables declaration                   
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 9348298c8f5aa38697e26fe0ff5be95d4cec49c6
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -491,5 +484,6 @@ new preview().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
+
 
 }
