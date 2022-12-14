@@ -26,6 +26,17 @@ public class locationService extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+    jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+    jButton2.setText("Karyakram");
+    jButton2.setBorder(null);
+    jButton2.addActionListener(
+      new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+          jButton2ActionPerformed(evt);
+
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -191,9 +202,9 @@ new preview().setVisible(true);        // TODO add your handling code here:
             java.util.logging.Logger.getLogger(locationService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(locationService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         }
       }
+      
     );
     getContentPane()
       .add(
@@ -369,7 +380,7 @@ new preview().setVisible(true);        // TODO add your handling code here:
       );
 
     pack();
-  } // </editor-fold>                        
+     }// </editor-fold>                        
 
   private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     // TODO add your handling code here:
@@ -426,7 +437,7 @@ new preview().setVisible(true);        // TODO add your handling code here:
     }
     //</editor-fold>
 
-<<<<<<< HEAD
+
     /* Create and display the form */
     java.awt.EventQueue.invokeLater(
       new Runnable() {
@@ -455,7 +466,6 @@ new preview().setVisible(true);        // TODO add your handling code here:
   private javax.swing.JLabel jLabel8;
   private javax.swing.JLabel jLabel9;
   // End of variables declaration                   
-=======
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -474,5 +484,6 @@ new preview().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
+
+
 }

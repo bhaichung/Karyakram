@@ -6,6 +6,8 @@ package view;
 
 import java.sql.ResultSet;
 
+import javax.swing.JOptionPane;
+
 import controller.UserController;
 import models.User;
 
@@ -20,6 +22,7 @@ public class Edit extends javax.swing.JFrame {
      */
     public Edit() {
         initComponents();
+        view();
     }
 
     /**
@@ -174,7 +177,17 @@ public class Edit extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-               // TODO add your handling code here:
+               String fnameString = fname.getText();
+               String lnameString = lname.getText();
+               String passwordString = password.getText();
+               String repasswordString = repass.getText();
+
+               User u1 = new User(fnameString, lnameString, null, null, passwordString, repasswordString,null,null,null,null);
+               UserController uc = new UserController();
+               int result = uc.updatedetails(u1);
+               if(result>0){
+                JOptionPane.showMessageDialog(this, "Updated Success");
+               }
     }//GEN-LAST:event_submitActionPerformed
 
     private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
@@ -192,28 +205,29 @@ public class Edit extends javax.swing.JFrame {
     private void fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fnameActionPerformed
+    
+        
+    
     public void view(){
         try {
-            User s1 = new User(null, null, null, null, null, null, null, null, null, null);
-            UserController sc= new UserController();
-            ResultSet isInserted = sc.selectUser(s1);
-            
-            if(isInserted.next()){
-                String fname = isInserted.getString(1);
-                String lname = isInserted.getString(2);
-                String pass = isInserted.getString(6);
+            ResultSet result = new UserController().selectDetails();
+            while(result.next()){
+                String fname1 = result.getString(1);
+                String lname1 = result.getString(2);
+                String pass1= result.getString(3);
 
-                fname.setText(fname);
-                lname.setText(lname);
-               pass.setText(pass);
-                
+                fname.setText(fname1);
+                lname.setText(lname1);
+                password.setText(pass1);
+                repass.setText(pass1);
             }
+                
+            
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
-        
-    } 
+        }}
+
     /**
      * @param args the command line arguments
      */

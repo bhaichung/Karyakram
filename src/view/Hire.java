@@ -36,7 +36,6 @@ public class Hire extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-<<<<<<< HEAD
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -58,8 +57,6 @@ public class Hire extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-=======
-<<<<<<< HEAD
         jPanel3 = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel5 = new javax.swing.JLabel();
@@ -83,12 +80,10 @@ public class Hire extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jCheckBox4 = new javax.swing.JCheckBox();
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-<<<<<<< HEAD
         jRadioButton4 = new javax.swing.JRadioButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
@@ -112,16 +107,11 @@ public class Hire extends javax.swing.JFrame {
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-=======
         jPanel7 = new javax.swing.JPanel();
         jCheckBox5 = new javax.swing.JCheckBox();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-=======
->>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
-
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 786));
@@ -431,7 +421,6 @@ public class Hire extends javax.swing.JFrame {
                 .addComponent(jLabel19)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-<<<<<<< HEAD
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 330, 260, 150));
 
@@ -466,8 +455,7 @@ public class Hire extends javax.swing.JFrame {
                         .addComponent(jRadioButton3)
                         .addContainerGap())))
         );
-=======
-<<<<<<< HEAD
+
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -614,7 +602,6 @@ public class Hire extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 340, 260, 150));
-=======
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -627,7 +614,6 @@ public class Hire extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(0, 470, Short.MAX_VALUE))
         );
->>>>>>> 9ebdbfe5758976fa0df3db9558a2573d6a9c7ecd
 
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -659,7 +645,6 @@ public class Hire extends javax.swing.JFrame {
                         .addContainerGap())
                     .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
@@ -667,11 +652,6 @@ public class Hire extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-<<<<<<< HEAD
-                        .addComponent(jRadioButton3)
-=======
-                        .addComponent(jCheckBox5)
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel22)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -679,7 +659,6 @@ public class Hire extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
-<<<<<<< HEAD
         jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 330, 270, 150));
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
