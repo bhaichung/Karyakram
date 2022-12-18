@@ -252,7 +252,7 @@ public class Register extends javax.swing.JFrame {
           emailText.getText(),
         phoneNumberText.getText(),
         new String(passwordText.getPassword()),
-          sqText.getText(),null
+          sqText.getText(),null,null,null,null
         );
         UserController uc = new UserController();
         int result = uc.insertDetails(u1);
