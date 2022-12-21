@@ -6,6 +6,7 @@ package view;
 import javax.swing.JOptionPane;
 import controller.UserController;
 import models.User;
+import view.Login;
 /**
  *
  * @author acer

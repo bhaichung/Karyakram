@@ -4,6 +4,8 @@
  */
 package view;
 
+import view.userDashboardLoggedIn;
+
 /**
  *
  * @author acer
