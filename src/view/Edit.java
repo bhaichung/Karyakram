@@ -182,6 +182,8 @@ public class Edit extends javax.swing.JFrame {
                int result = uc.updatedetails(u1);
                if(result>0){
                 JOptionPane.showMessageDialog(this, "Updated Success");
+                dispose();
+                new Login().setVisible(true);
                }
     }//GEN-LAST:event_submitActionPerformed
 

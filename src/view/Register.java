@@ -252,13 +252,14 @@ public class Register extends javax.swing.JFrame {
           emailText.getText(),
         phoneNumberText.getText(),
         new String(passwordText.getPassword()),
-          sqText.getText(),null
+          sqText.getText(),null,null,null,null
         );
         UserController uc = new UserController();
         int result = uc.insertDetails(u1);
         if (result > 0) {
           JOptionPane.showMessageDialog(null, " Register Success");
-                  new Login().setVisible(true);      
+                  new Login().setVisible(true);   
+                  dispose();   
         } else {
           JOptionPane.showMessageDialog(null, "Not successful");
         }
