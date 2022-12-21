@@ -4,11 +4,9 @@
  */
 package view;
 
-import controller.CustomerController;
 import controller.UserController;
 import models.User;
 
-import java.util.Objects;
 import javax.swing.JOptionPane;
 import java.awt.event.WindowEvent;
 import java.sql.ResultSet;

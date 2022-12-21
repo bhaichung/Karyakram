@@ -84,7 +84,7 @@ public class editFeedback extends javax.swing.JFrame {
         try {
             ResultSet result1 = new UserController().selectFeedback();
             while(result1.next()){
-                String feedback = result1.getString(1);
+                String feedback = result1.getString(2);
                 editFeedback.setText(feedback);
             }
                 

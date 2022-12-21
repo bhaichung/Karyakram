@@ -45,6 +45,13 @@ public class UserController {
         return result;
     }
 
+    public ResultSet selectEmail(){
+        String query = "select email,phone from User where status='"+"active"+"' ";
+        dbConnection = new DbConnection();
+        ResultSet rs = dbConnection.retrieve(query);
+        return rs;
+    }
+
     public int changeStatus(User user){
         String query = "update User set status='"+"inactive"+"'";
         dbConnection = new DbConnection();
