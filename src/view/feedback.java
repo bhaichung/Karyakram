@@ -21,6 +21,7 @@ public class feedback extends javax.swing.JFrame {
      */
     public feedback() {
         initComponents();
+        view();
     }
 
     /**
@@ -38,6 +39,11 @@ public class feedback extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         sumbit = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        editFeedback = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        feed = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        feed1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +76,33 @@ public class feedback extends javax.swing.JFrame {
         jPanel1.add(sumbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 210, -1));
 
+        editFeedback.setText("EDIT");
+        editFeedback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editFeedbackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(editFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Feedbacks");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+
+        feed.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        feed.setToolTipText("");
+        feed.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel1.add(feed, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 210, 20));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        feed1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        feed1.setToolTipText("");
+        feed1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel2.add(feed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 210, 20));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 230, 80));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -80,7 +113,7 @@ public class feedback extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
         );
 
         pack();
@@ -102,6 +135,27 @@ JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
         // TODO add your handling code here:
     }//GEN-LAST:event_tfFeedbackActionPerformed
 
+    private void editFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editFeedbackActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new editFeedback().setVisible(true);
+
+    }//GEN-LAST:event_editFeedbackActionPerformed
+    public void view(){
+        try {
+            ResultSet result1 = new UserController().selectFeedback();
+            while(result1.next()){
+                String fname = result1.getString(1);
+                String feedback = result1.getString(2);
+                feed.setText(fname);
+                feed1.setText(feedback);
+            }
+                
+            
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }}
     /**
      * @param args the command line arguments
      */
@@ -138,10 +192,15 @@ JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton editFeedback;
+    private javax.swing.JLabel feed;
+    private javax.swing.JLabel feed1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton sumbit;
     private javax.swing.JTextField tfFeedback;
     // End of variables declaration//GEN-END:variables

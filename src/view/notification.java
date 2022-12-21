@@ -69,10 +69,11 @@ public class notification extends javax.swing.JFrame {
         try {
             ResultSet rs = new UserController().getNotification();
             while(rs.next()){
-                String noti = rs.getString(1);
-                String advance = rs.getString(2);
-                String remaining = rs.getString(3);
-                noti1.setText(noti);
+                String fname = rs.getString(1);
+                String noti = rs.getString(2);
+                String advance = rs.getString(3);
+                String remaining = rs.getString(4);
+                noti1.setText("Hello "+fname+","+noti);
                 noti3.setText("You have paid "+advance+" in advance.");
                 noti2.setText("Your remaining amonut is "+remaining+" .");
                 

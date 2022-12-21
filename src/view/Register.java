@@ -258,7 +258,8 @@ public class Register extends javax.swing.JFrame {
         int result = uc.insertDetails(u1);
         if (result > 0) {
           JOptionPane.showMessageDialog(null, " Register Success");
-                  new Login().setVisible(true);      
+                  new Login().setVisible(true);   
+                  dispose();   
         } else {
           JOptionPane.showMessageDialog(null, "Not successful");
         }
