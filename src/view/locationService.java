@@ -455,7 +455,6 @@ new preview().setVisible(true);        // TODO add your handling code here:
   private javax.swing.JLabel jLabel8;
   private javax.swing.JLabel jLabel9;
   // End of variables declaration                   
-=======
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -474,5 +473,4 @@ new preview().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
->>>>>>> 62eb5a2faac6d0363096f596ad5df62952f8ab19
 }
