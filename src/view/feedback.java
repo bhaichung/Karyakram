@@ -44,6 +44,7 @@ public class feedback extends javax.swing.JFrame {
         feed = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         feed1 = new javax.swing.JLabel();
+        deleteFeed = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,13 +77,15 @@ public class feedback extends javax.swing.JFrame {
         jPanel1.add(sumbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 210, -1));
 
+        editFeedback.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        editFeedback.setForeground(new java.awt.Color(102, 102, 255));
         editFeedback.setText("EDIT");
         editFeedback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editFeedbackActionPerformed(evt);
             }
         });
-        jPanel1.add(editFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
+        jPanel1.add(editFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Feedbacks");
@@ -102,6 +105,16 @@ public class feedback extends javax.swing.JFrame {
         jPanel2.add(feed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 210, 20));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 230, 80));
+
+        deleteFeed.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        deleteFeed.setForeground(new java.awt.Color(204, 0, 0));
+        deleteFeed.setText("DELETE");
+        deleteFeed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteFeedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(deleteFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,6 +154,13 @@ JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
         new editFeedback().setVisible(true);
 
     }//GEN-LAST:event_editFeedbackActionPerformed
+
+    private void deleteFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteFeedActionPerformed
+        // TODO add your handling code here:
+        UserController uc = new UserController();
+        int rs = uc.deleteFeedback();
+        dispose();
+    }//GEN-LAST:event_deleteFeedActionPerformed
     public void view(){
         try {
             ResultSet result1 = new UserController().selectFeedback();
@@ -192,6 +212,7 @@ JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton deleteFeed;
     private javax.swing.JButton editFeedback;
     private javax.swing.JLabel feed;
     private javax.swing.JLabel feed1;

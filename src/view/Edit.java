@@ -20,6 +20,7 @@ public class Edit extends javax.swing.JFrame {
      */
     public Edit() {
         initComponents();
+        view();;
     }
 
     /**
@@ -215,16 +216,16 @@ public class Edit extends javax.swing.JFrame {
         try {
             User s1 = new User(null, null, null, null, null, null, null, null, null, null);
             UserController sc= new UserController();
-            ResultSet isInserted = sc.selectUser(s1);
+            ResultSet isInserted = sc.selectDetails();
             
             if(isInserted.next()){
                 String fname = isInserted.getString(1);
                 String lname = isInserted.getString(2);
                 String pass = isInserted.getString(6);
 
-                fname.setText(fname);
-                lname.setText(lname);
-               pass.setText(pass);
+            //     fname.setText(fname);
+            //     lname.setText(lname);
+            //    pass.setText(pass);
                 
             }
         } catch (Exception e) {
