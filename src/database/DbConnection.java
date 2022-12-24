@@ -70,13 +70,11 @@ public class DbConnection {
 
             connection.close();
 
-        }catch (SQLIntegrityConstraintViolationException ex){
+        
 
-            JOptionPane.showMessageDialog(null, "These details already exist!");
+        }catch (Exception e){
 
-        }catch (SQLException e){
-
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,e);
 
         }
 

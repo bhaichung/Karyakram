@@ -52,29 +52,33 @@ public class UserController {
         return rs;
     }
 
-    public int changeStatus(User user){
+    public int changeStatus(){
         String query = "update User set status='"+"inactive"+"'";
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(query);
         return result;
-
-
-
     }
+    public int logout(){
+        String query = "update User set status='"+"inactive"+"'where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(query);
+        return result;
+    }
+    
+    public int deleteAccount(){
+        String query = "delete from User where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(query);
+        return result;
+    }
+
     public int updateStatus(User user){
         String email = user.getUser_email();
         String query = "update User set status='"+"active"+"' where email='"+email+"'";
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(query);
         return result;
-
-
-
     }
-
-    
-    
-
     public int updatedetails(User user) {
         String fname = user.getUser_fname();
         String lname = user.getUser_lname();
@@ -110,6 +114,14 @@ public class UserController {
 
     }
 
+    public int deleteFeedback(){
+        String deleteFeedbacks = "update User set feedback='"+""+"'where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(deleteFeedbacks);
+        return result;
+
+    }
+
 
 
     public int notification(User user){
@@ -125,7 +137,18 @@ public class UserController {
         ResultSet result = dbConnection.retrieve(selectQuery);
         return result;
     }
-
+public static void main(String[] args) {
+        try {
+             UserController uc = new UserController();
+             ResultSet rs= uc.selectEmail();
+                while(rs.next()){
+                    System.out.println(rs.getString("email"));
+                }
+            // User user = new User();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+}
 
     
 }

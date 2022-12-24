@@ -7,6 +7,8 @@ package view;
 import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 import controller.HireController;
 import controller.UserController;
@@ -29,6 +31,7 @@ public class booking extends javax.swing.JFrame {
         initComponents();
         addHire();
         addVenue();
+        table();
     }
 
     /**
@@ -68,7 +71,7 @@ public class booking extends javax.swing.JFrame {
         venueCombo = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
+        editBtn = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         confirmVenue = new javax.swing.JButton();
         venueDetails1 = new javax.swing.JLabel();
@@ -219,34 +222,40 @@ public class booking extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Abhigya Shrestha", "9844642649", "LOD", "Asmit", "2022-12-18", "1500", "55000"},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, "Abhigya Shrestha", "9844642649", "LOD", "Asmit", "2022-12-18", "1500", "55000"},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Full Name", "Phone Number", "Venue", "Hired", "Date", "No of People", "Total"
+                "SN", "Full Name", "Phone Number", "Venue", "Hired", "Date", "No of People", "Total"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(20);
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, 600, 240));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, 690, 240));
 
-        jButton2.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(102, 102, 255));
-        jButton2.setText("EDIT");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        editBtn.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        editBtn.setForeground(new java.awt.Color(102, 102, 255));
+        editBtn.setText("EDIT");
+        editBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                editBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, -1, 40));
+        jPanel1.add(editBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, -1, 40));
 
         jButton3.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 0, 0));
-        jButton3.setText("DELETE");
+        jButton3.setText("CANCEL");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 600, -1, 40));
 
         confirmVenue.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -337,9 +346,30 @@ public class booking extends javax.swing.JFrame {
         venueCombo.setEnabled(false);
     }//GEN-LAST:event_confirmVenueActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-new editBooking().setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed
+        try {
+            // TODO add your handling code here:
+            int i = jTable1.getSelectedRow();
+            TableModel model = jTable1.getModel();
+           int id =Integer.parseInt(model.getValueAt(i, 0).toString());
+
+            Booking b = new Booking(id, null,null,0,0,null,0);
+            bookingController bc = new bookingController();
+            int b1 = bc.chooseBooking(b);
+
+            if(b1==1){
+                JOptionPane.showMessageDialog(null, "Booking Selected");
+                dispose();
+                new editBooking().setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Booking Not Confirmed");
+            }
+        } catch (Exception ex) {
+           
+        }
+         
+    }//GEN-LAST:event_editBtnActionPerformed
 
     private void venueComboMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_venueComboMouseReleased
         
@@ -414,54 +444,98 @@ new editBooking().setVisible(true);        // TODO add your handling code here:
 
     private void confirmBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBookActionPerformed
         
+        String date = dateText.getText();
         String email = null;
         String phone = null;
         int v_id = 0;
         String vName = venueNameTxt.getText();
         String hName= h_name1.getText();
         int noCustomers = Integer.parseInt(noText.getText());
-        String date = dateText.getText();
         int hireprice = 0;
         int venuePrice = 0;
         int total = 0;
-        hire h1 = new hire(hName,null,null,null,null);
-        Venue v1 = new Venue(0,vName,0,0,null);
+// Check if the fields are empty
+        if (date.equals("") || noCustomers == 0) {
+            JOptionPane.showMessageDialog(null, "Please fill all the fields");
 
-        HireController hc = new HireController();
-        venueController vc = new venueController();
-
-        ResultSet rSet = hc.selectHiredetails(h1);
-        ResultSet rSet2 = vc.selectVenueName(v1);
-        ResultSet rset3 = new UserController().selectEmail();
-
-        try {
-            while(rSet.next()){
-                phone = rSet.getString(1);
-                hireprice = Integer.parseInt(rSet.getString(2));   
-            }
-
-            while(rSet2.next()){
-                v_id  = Integer.parseInt(rSet.getString(1));
-                venuePrice = Integer.parseInt(rSet.getString(2));
-            }
-
-            while(rset3.next()){
-                email = rset3.getString(1);
-            }
-
-              total = hireprice+venuePrice;
-        } catch (Exception e) {
-            // TODO: handle exception
+        } 
+        else if(dateValid.dateVerify(date)){
+            JOptionPane.showMessageDialog(null, "Please enter a valid date");
         }
-
-        Booking b1= new Booking(0,email,phone,v_id,noCustomers,date,total);
-        bookingController bc = new bookingController();
-        int result = bc.insertDetails(b1);
-        if(result>0){
-            JOptionPane.showMessageDialog(this, "Booked Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+        else {
+            
+            hire h1 = new hire(hName,null,null,null,null);
+            Venue v1 = new Venue(0,vName,0,0,null);
+    
+            HireController hc = new HireController();
+            venueController vc = new venueController();
+    
+            ResultSet rSet = hc.selectHiredetails(h1);
+            ResultSet rSet2 = vc.selectVenueName(v1);
+            ResultSet rset3 = new UserController().selectEmail();
+    
+            try {
+                while(rSet.next()){
+                    phone = rSet.getString(1);
+                    hireprice = Integer.parseInt(rSet.getString(2));   
+                }
+    
+                while(rSet2.next()){
+                    v_id  = Integer.parseInt(rSet2.getString(1));
+                    venuePrice = Integer.parseInt(rSet2.getString(2));
+                }
+    
+                while(rset3.next()){
+                    email = rset3.getString(1);
+    
+                }
+    
+                  total = hireprice+venuePrice;
+            } catch (Exception e) {
+                // TODO: handle exception
+                JOptionPane.showMessageDialog(this, e);
+            }
+    
+            Booking b1= new Booking(0,email,phone,v_id,noCustomers,date,total);
+            bookingController bc = new bookingController();
+            System.out.println(email);
+            int result = bc.insertDetails(b1);
+            if(result>0){
+                JOptionPane.showMessageDialog(this, "Booked Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+                table();
+            }
         }
     }//GEN-LAST:event_confirmBookActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+            // TODO add your handling code here:
+            // Booking b1 = new Booking()
+            int i = jTable1.getSelectedRow();
+            TableModel model = jTable1.getModel();
+            int id = Integer.parseInt(model.getValueAt(i, 0).toString());
+            Booking b1 = new Booking(id,null,null,0,0,null,0);
+            bookingController bc = new bookingController();
+            int result = bc.cancelBooking(b1);
+            if(result>0){
+                JOptionPane.showMessageDialog(this, "Canceled Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+                table();
+            }
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    public void table(){
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+        ResultSet rs = new bookingController().selectDetails();
+        try {
+            while(rs.next()){
+                Object[] row = {rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8)};
+                model.addRow(row);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e);
+        }
+    }
     public void addHire(){
         hireCombo.removeAllItems();
 
@@ -531,13 +605,13 @@ new editBooking().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JButton confirmHire;
     private javax.swing.JButton confirmVenue;
     private javax.swing.JTextField dateText;
+    private javax.swing.JButton editBtn;
     private javax.swing.JLabel h_name;
     private javax.swing.JLabel h_name1;
     private javax.swing.JLabel h_name2;
     private javax.swing.JLabel h_name3;
     private javax.swing.JLabel h_name4;
     private javax.swing.JComboBox<String> hireCombo;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

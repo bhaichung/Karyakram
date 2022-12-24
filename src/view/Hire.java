@@ -526,7 +526,7 @@ public class Hire extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-new advPayement().setVisible(true);
+    new booking().setVisible(true);
            // TODO add your handling code here:
        
     }//GEN-LAST:event_jButton5ActionPerformed
