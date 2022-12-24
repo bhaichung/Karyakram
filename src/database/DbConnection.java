@@ -24,15 +24,15 @@ public class DbConnection {
 
         try {
 
-            String username = "root";
+            String username = "karyakram";
 
-            String password = "root";
+            String password = "karyakram";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             connection = DriverManager.getConnection(
 
-                    "jdbc:mysql://localhost:3306/karyakram",username,password);
+                    "jdbc:mysql://db4free.net:3306/karyakram",username,password);
 
 
 
@@ -70,11 +70,13 @@ public class DbConnection {
 
             connection.close();
 
-        
+        }catch (SQLIntegrityConstraintViolationException ex){
 
-        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "These details already exist!");
 
-            JOptionPane.showMessageDialog(null,e);
+        }catch (SQLException e){
+
+            e.printStackTrace();
 
         }
 
@@ -109,4 +111,3 @@ public class DbConnection {
     }
 
 }
-

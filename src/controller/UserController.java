@@ -4,7 +4,7 @@ import database.DbConnection;
 import java.sql.ResultSet;
 import models.User;
 
-public class UserController {
+public class UserController{
 
   DbConnection dbConnection;
 
@@ -33,7 +33,6 @@ public class UserController {
     dbConnection = new DbConnection();
     return dbConnection.manipulate(insertQuery);
   }
-
   public int reset(User user) {
     String sq = user.getUser_sq();
     String pass = user.getUser_password();
@@ -53,7 +52,6 @@ public class UserController {
     return rs;
   }
 
-<<<<<<< HEAD
     public int changeStatus(){
         String query = "update User set status='"+"inactive"+"'";
         dbConnection = new DbConnection();
@@ -81,12 +79,7 @@ public class UserController {
         int result = dbConnection.manipulate(query);
         return result;
     }
-    public int updatedetails(User user) {
-        String fname = user.getUser_fname();
-        String lname = user.getUser_lname();
-        String pass = user.getUser_password();
-        
-=======
+
   public ResultSet loginDetails(User user) {
     String email = user.getUser_email();
     String pass = user.getUser_password();
@@ -111,15 +104,6 @@ public class UserController {
 
   public int changeStatus(User user) {
     String query = "update User set status='" + "inactive" + "'";
-    dbConnection = new DbConnection();
-    int result = dbConnection.manipulate(query);
-    return result;
-  }
-
-  public int updateStatus(User user) {
-    String email = user.getUser_email();
-    String query =
-      "update User set status='" + "active" + "' where email='" + email + "'";
     dbConnection = new DbConnection();
     int result = dbConnection.manipulate(query);
     return result;
@@ -166,34 +150,7 @@ public class UserController {
     return result;
   }
 
-  public int editFeedback(User user) {
-    String feedback = user.getUser_feedback();
-    String editFeedbacks =
-      "update User set feedback='" +
-      feedback +
-      "'where status='" +
-      "active" +
-      "'";
-    dbConnection = new DbConnection();
-    int result = dbConnection.manipulate(editFeedbacks);
-    return result;
-  }
->>>>>>> 4b5854e6a81cf813ec8eedd349a7e7cec27e48c0
-
-  public int notification(User user) {
-    String notificationQuery =
-      "update User set notification='" +
-      "You have Sucessfully Loggged In" +
-      "' where status='" +
-      "active" +
-      "'";
-    dbConnection = new DbConnection();
-    int result = dbConnection.manipulate(notificationQuery);
-    return result;
-  }
-
-<<<<<<< HEAD
-    }
+    
     public int editFeedback(User user){
         String feedback = user.getUser_feedback();
         String editFeedbacks = "update User set feedback='"+feedback+"'where status='"+"active"+"'";
@@ -211,8 +168,6 @@ public class UserController {
 
     }
 
-
-
     public int notification(User user){
         String notificationQuery = "update User set notification='"+"You have Sucessfully Loggged In"+"' where status='"+"active"+"'";
         dbConnection = new DbConnection();
@@ -226,29 +181,5 @@ public class UserController {
         ResultSet result = dbConnection.retrieve(selectQuery);
         return result;
     }
-public static void main(String[] args) {
-        try {
-             UserController uc = new UserController();
-             ResultSet rs= uc.selectEmail();
-                while(rs.next()){
-                    System.out.println(rs.getString("email"));
-                }
-            // User user = new User();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-}
 
-    
-=======
-  public ResultSet getNotification() {
-    String selectQuery =
-      "select fname,notification,advancePayement,remaningPayement from User where status='" +
-      "active" +
-      "'";
-    dbConnection = new DbConnection();
-    ResultSet result = dbConnection.retrieve(selectQuery);
-    return result;
-  }
->>>>>>> 4b5854e6a81cf813ec8eedd349a7e7cec27e48c0
 }
