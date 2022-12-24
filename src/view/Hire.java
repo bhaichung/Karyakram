@@ -566,17 +566,9 @@ public class Hire extends javax.swing.JFrame {
 
   }//GEN-LAST:event_jButton5ActionPerformed
 
-<<<<<<< HEAD
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    new booking().setVisible(true);
-           // TODO add your handling code here:
-       
-    }//GEN-LAST:event_jButton5ActionPerformed
-=======
   private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
 new about_us().setVisible(true);    // TODO add your handling code here:
   }//GEN-LAST:event_jMenu2MouseClicked
->>>>>>> 4b5854e6a81cf813ec8eedd349a7e7cec27e48c0
 
   private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
     // TODO add your handling code here:
