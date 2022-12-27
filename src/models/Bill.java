@@ -7,6 +7,8 @@ public class Bill {
     private int adv_payment;
     private int remaining_payment;
     private String date;
+    private String reciver_name;
+    
     public int getBill_id() {
         return bill_id;
     }
@@ -43,14 +45,21 @@ public class Bill {
     public void setDate(String date) {
         this.date = date;
     }
-    public Bill(int bill_id, String email, int total, int adv_payment, int remaining_payment, String date) {
+    public String getReciver_name() {
+        return reciver_name;
+    }
+    public void setReciver_name(String reciver_name) {
+        this.reciver_name = reciver_name;
+    }
+    public Bill(int bill_id, String email, int total, int adv_payment, int remaining_payment, String date, String reviver_name ) {
         this.bill_id = bill_id;
         this.email = email;
         this.total = total;
         this.adv_payment = adv_payment;
         this.remaining_payment = remaining_payment;
         this.date = date;
+        this.reciver_name = reviver_name;
     }
 
-    
-}
+}   
+
