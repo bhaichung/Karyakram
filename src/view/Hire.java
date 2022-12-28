@@ -6,12 +6,17 @@ package view;
 
 import java.awt.Color;
 
+import javax.swing.JOptionPane;
+
+import controller.HireController;
+import models.hire;
+
 /**
  *
  * @author Sandeep
  */
 public class Hire extends javax.swing.JFrame {
-
+    
   /**
    * Creates new form Hire
    */
@@ -28,47 +33,48 @@ public class Hire extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         Hire = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        shrreejanCheck = new javax.swing.JCheckBox();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        prashantCheck = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        shrawaniCheck = new javax.swing.JCheckBox();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        hireBtn = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        abhhiggyaCheck = new javax.swing.JCheckBox();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jCheckBox5 = new javax.swing.JCheckBox();
+        parashCheck = new javax.swing.JCheckBox();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        sleshaCheck = new javax.swing.JCheckBox();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jCheckBox7 = new javax.swing.JCheckBox();
+        aryanCheck = new javax.swing.JCheckBox();
         jLabel13 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
-        jCheckBox9 = new javax.swing.JCheckBox();
+        rameshCheck = new javax.swing.JCheckBox();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -106,8 +112,9 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox1.setText("Shreejan Manadhar");
+        buttonGroup1.add(shrreejanCheck);
+        shrreejanCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        shrreejanCheck.setText("Shreejan Manandhar");
 
         jLabel6.setText("5 years experience");
 
@@ -122,14 +129,14 @@ public class Hire extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(102, Short.MAX_VALUE))
+                    .addComponent(shrreejanCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jCheckBox1)
+                .addComponent(shrreejanCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -141,8 +148,9 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox2.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox2.setText("Prashant Basel");
+        buttonGroup1.add(prashantCheck);
+        prashantCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        prashantCheck.setText("Prashant Basel");
 
         jLabel9.setText("5 years experience");
 
@@ -156,7 +164,7 @@ public class Hire extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(prashantCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +176,7 @@ public class Hire extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jCheckBox2)
+                .addComponent(prashantCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -188,11 +196,12 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox3.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox3.setText("Shrawani KC");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(shrawaniCheck);
+        shrawaniCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        shrawaniCheck.setText("Shrawani KC");
+        shrawaniCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                shrawaniCheckActionPerformed(evt);
             }
         });
 
@@ -207,7 +216,7 @@ public class Hire extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(shrawaniCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addContainerGap(142, Short.MAX_VALUE))
@@ -216,7 +225,7 @@ public class Hire extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jCheckBox3)
+                .addComponent(shrawaniCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -230,16 +239,16 @@ public class Hire extends javax.swing.JFrame {
         jLabel16.setText("Security Mananger");
         Hire.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, 180, -1));
 
-        jButton5.setBackground(new java.awt.Color(102, 102, 255));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("HIRE");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        hireBtn.setBackground(new java.awt.Color(102, 102, 255));
+        hireBtn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        hireBtn.setForeground(new java.awt.Color(255, 255, 255));
+        hireBtn.setText("HIRE");
+        hireBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                hireBtnActionPerformed(evt);
             }
         });
-        Hire.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 620, 129, 51));
+        Hire.add(hireBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 620, 129, 51));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setText("Event Cordinator");
@@ -247,8 +256,9 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox4.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox4.setText("Abhigya Shrestha");
+        buttonGroup1.add(abhhiggyaCheck);
+        abhhiggyaCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        abhhiggyaCheck.setText("Abhigya Shrestha");
 
         jLabel18.setText("3 years experience");
 
@@ -267,7 +277,7 @@ public class Hire extends javax.swing.JFrame {
                         .addGap(113, 113, 113)
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(abhhiggyaCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -276,7 +286,7 @@ public class Hire extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jCheckBox4)
+                .addComponent(abhhiggyaCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -290,8 +300,9 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox5.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox5.setText("Parash Hamal");
+        buttonGroup1.add(parashCheck);
+        parashCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        parashCheck.setText("Parash Hamal");
 
         jLabel22.setText("4 years experience");
 
@@ -306,7 +317,7 @@ public class Hire extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(parashCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(13, 13, 13)
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -316,7 +327,7 @@ public class Hire extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox5)
+                .addComponent(parashCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -328,8 +339,9 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox6.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox6.setText("Slesha Dahal");
+        buttonGroup1.add(sleshaCheck);
+        sleshaCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        sleshaCheck.setText("Slesha Dahal");
 
         jLabel5.setText("6 years experience");
 
@@ -343,7 +355,7 @@ public class Hire extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jCheckBox6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(sleshaCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
                     .addComponent(jLabel8))
                 .addContainerGap(160, Short.MAX_VALUE))
@@ -352,7 +364,7 @@ public class Hire extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jCheckBox6)
+                .addComponent(sleshaCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -368,8 +380,9 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox7.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox7.setText("Aryan Jung Karki");
+        buttonGroup1.add(aryanCheck);
+        aryanCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        aryanCheck.setText("Aryan Jung Karki");
 
         jLabel13.setText("7 years experience");
 
@@ -383,7 +396,7 @@ public class Hire extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jCheckBox7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(aryanCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel24))
                 .addContainerGap(132, Short.MAX_VALUE))
@@ -392,7 +405,7 @@ public class Hire extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jCheckBox7)
+                .addComponent(aryanCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -404,8 +417,9 @@ public class Hire extends javax.swing.JFrame {
 
         jPanel10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox9.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jCheckBox9.setText("Ramesh Shah");
+        buttonGroup1.add(rameshCheck);
+        rameshCheck.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        rameshCheck.setText("Ramesh Shah");
 
         jLabel27.setText("3 years experience");
 
@@ -419,7 +433,7 @@ public class Hire extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jCheckBox9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rameshCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel28))
                 .addContainerGap(136, Short.MAX_VALUE))
@@ -428,7 +442,7 @@ public class Hire extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jCheckBox9)
+                .addComponent(rameshCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel27)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -561,15 +575,47 @@ public class Hire extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-  private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+  private void shrawaniCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shrawaniCheckActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_jCheckBox3ActionPerformed
+  }//GEN-LAST:event_shrawaniCheckActionPerformed
 
-  private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    new booking().setVisible(true);
+  private void hireBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hireBtnActionPerformed
+    String name=  "";
+    if(shrawaniCheck.isSelected()){
+      name = shrawaniCheck.getText();
+    }
+    if(shrreejanCheck.isSelected()){
+      name = shrreejanCheck.getText();
+    }
+    if(abhhiggyaCheck.isSelected()){
+      name = abhhiggyaCheck.getText();
+    }if(parashCheck.isSelected()){
+      name = parashCheck.getText();
+    }if(prashantCheck.isSelected()){
+      name = prashantCheck.getText();
+    }if(sleshaCheck.isSelected()){
+      name = sleshaCheck.getText();
+    }
+      if(aryanCheck.isSelected()){
+        name = aryanCheck.getText();
+    }if(rameshCheck.isSelected()){
+      name = rameshCheck.getText();
+    }
+    // System.out.println(name);
+    JOptionPane.showMessageDialog(null, "You have hired "+name);
+    if(!name.equals("")){
+
+        hire h1 = new hire(name,null,null,null,null) ;
+        HireController hc = new HireController();
+        hc.resetStatus();
+        hc.setStatus(h1);
+        dispose();
+      new booking().setVisible(true);
+    }
+    // new booking().setVisible(true);
     // TODO add your handling code here:
 
-  }//GEN-LAST:event_jButton5ActionPerformed
+  }//GEN-LAST:event_hireBtnActionPerformed
 
   private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
 new about_us().setVisible(true);    // TODO add your handling code here:
@@ -638,15 +684,10 @@ new locService().setVisible(true);        // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Hire;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox abhhiggyaCheck;
+    private javax.swing.JCheckBox aryanCheck;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton hireBtn;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -695,5 +736,11 @@ new locService().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JCheckBox parashCheck;
+    private javax.swing.JCheckBox prashantCheck;
+    private javax.swing.JCheckBox rameshCheck;
+    private javax.swing.JCheckBox shrawaniCheck;
+    private javax.swing.JCheckBox shrreejanCheck;
+    private javax.swing.JCheckBox sleshaCheck;
     // End of variables declaration//GEN-END:variables
 }

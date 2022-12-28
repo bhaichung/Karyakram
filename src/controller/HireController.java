@@ -27,4 +27,25 @@ public class HireController {
         ResultSet result = dbConnection.retrieve(query);
         return result;
     }
+
+    public int setStatus(hire hire){
+        String query = "update hire set status='"+"active"+"' where name='"+hire.gethire_name()+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(query);
+        return result;
+    }
+
+    public int resetStatus(){
+        String query = "update hire set status='"+"inactive"+"' where status='"+"active"+"' ";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(query);
+        return result;
+    }
+
+    public ResultSet selectHireStatus(){
+        String query = "select name from hire where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(query);
+        return result;
+    }
 }

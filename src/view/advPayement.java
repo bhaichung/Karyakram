@@ -4,8 +4,12 @@
  */
 package view;
 
+import java.sql.ResultSet;
+
 import javax.swing.JOptionPane;
 
+import controller.BillController;
+import models.Bill;
 import view.userDashboardLoggedIn;
 
 /**
@@ -108,6 +112,24 @@ public class advPayement extends javax.swing.JFrame {
     new userDashboardLoggedIn().setVisible(true);
 
     }//GEN-LAST:event_jButton1ActionPerformed
+    public void view(){
+        try{
+        Bill b1 = new Bill(null,null,null,null,null,null,null);
+        BillController bc = new BillController();
+        ResultSet isInserted = bc.display();
+        if(isInserted.next()){
+            String name1 = isInserted.getString(1);
+            String total1 = isInserted.getString(2);
+            String paid1 = isInserted.getString(3);
+            String remaining1 = isInserted.getString(4);
+            String raciver_name1 = isInserted.getString(5);
+        }
+
+    }
+    catch (Exception e){
+        e.printStackTrace();
+    }
+}
 
     /**
      * @param args the command line arguments
