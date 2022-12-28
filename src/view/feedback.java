@@ -108,7 +108,7 @@ public class feedback extends javax.swing.JFrame {
 
         deleteFeed.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         deleteFeed.setForeground(new java.awt.Color(204, 0, 0));
-        deleteFeed.setText("DELETE");
+        deleteFeed.setText("DELET");
         deleteFeed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteFeedActionPerformed(evt);
