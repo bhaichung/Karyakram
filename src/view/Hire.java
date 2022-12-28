@@ -499,6 +499,11 @@ public class Hire extends javax.swing.JFrame {
         jMenu4.add(jMenuItem4);
 
         jMenuItem5.setText("Location Service");
+        jMenuItem5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem5MouseClicked(evt);
+            }
+        });
         jMenu4.add(jMenuItem5);
 
         jMenuBar1.add(jMenu4);
@@ -579,8 +584,12 @@ new about_us().setVisible(true);    // TODO add your handling code here:
   }//GEN-LAST:event_jMenu7MouseClicked
 
     private void jMenuBar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuBar1MouseClicked
-    new notification().setVisible(true);        // TODO add your handling code here:
+    new about_us().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuBar1MouseClicked
+
+    private void jMenuItem5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem5MouseClicked
+new locService().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem5MouseClicked
 
   /**
    * @param args the command line arguments

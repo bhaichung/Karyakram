@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 import view.userDashboardLoggedIn;
 
 /**
@@ -100,7 +102,11 @@ public class advPayement extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    JOptionPane.showMessageDialog(this,"Sucessfully Paid");
+
+    dispose();
     new userDashboardLoggedIn().setVisible(true);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
