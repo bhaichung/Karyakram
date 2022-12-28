@@ -279,6 +279,7 @@ public class Register extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(null, " Register Success");
                   new Login().setVisible(true);   
                   dispose();   
+                  // new Login().setVisible(true);      
         } else {
           JOptionPane.showMessageDialog(null, "Not successful");
         }
@@ -287,7 +288,6 @@ public class Register extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, e);
       }
     }
-            new Login().setVisible(true);      
   }//GEN-LAST:event_jButton2ActionPerformed
    // TODO add your handling code here:
   private void confirmPasswordTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmPasswordTextActionPerformed

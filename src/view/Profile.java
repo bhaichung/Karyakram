@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.sql.ResultSet;
+
 import javax.swing.JOptionPane;
 
 import controller.UserController;
@@ -19,6 +21,7 @@ public class Profile extends javax.swing.JFrame {
      */
     public Profile() {
         initComponents();
+        view();
     }
 
     /**
@@ -136,10 +139,10 @@ public class Profile extends javax.swing.JFrame {
       if (response==JOptionPane.YES_NO_OPTION){
         UserController uc = new UserController();
         int rs = uc.logout();
-      new Register().setVisible(true);
+      new Login().setVisible(true);
       dispose();
       }else if (response == JOptionPane.CANCEL_OPTION){
-      dispose();}
+      return;}
        // TODO add your handling code here:
     
     }//GEN-LAST:event_logoutActionPerformed
@@ -156,15 +159,37 @@ public class Profile extends javax.swing.JFrame {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-        int response = JOptionPane.showConfirmDialog(this, "Are you sure you want to Logout?","Confirm",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        String email = null;
+        int response = JOptionPane.showConfirmDialog(this, "Are you sure you want to Delete?","Confirm",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
       if (response==JOptionPane.YES_NO_OPTION){
         UserController uc = new UserController();
+        try {
+            ResultSet result= uc.selectEmail();
+            while(result.next()){
+                email = result.getString(1);
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        uc.deleteBillEmail(email);
+        uc.deleteBookingEmail(email);
         int rs = uc.deleteAccount();
+        dispose();
       }
     else if (response == JOptionPane.CANCEL_OPTION){
         dispose();}
     }//GEN-LAST:event_deleteActionPerformed
-
+public void view(){
+    UserController uc = new UserController();
+    try {
+        ResultSet result= uc.selectName();
+        while(result.next()){
+            jLabel1.setText(result.getString(1));
+        }
+    } catch (Exception e) {
+        // TODO: handle exception
+    }
+}
     /**
      * @param args the command line arguments
      */

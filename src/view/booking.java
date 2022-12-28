@@ -359,7 +359,6 @@ public class booking extends javax.swing.JFrame {
 
             if(b1==1){
                 JOptionPane.showMessageDialog(null, "Booking Selected");
-                dispose();
                 new editBooking().setVisible(true);
             }
             else{
@@ -510,6 +509,10 @@ public class booking extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
             // TODO add your handling code here:
             // Booking b1 = new Booking()
+
+            int response = JOptionPane.showConfirmDialog(this, "Are you sure you want to cancel?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            
+           if(response == JOptionPane.YES_OPTION){
             int i = jTable1.getSelectedRow();
             TableModel model = jTable1.getModel();
             int id = Integer.parseInt(model.getValueAt(i, 0).toString());
@@ -520,6 +523,10 @@ public class booking extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Canceled Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
                 table();
             }
+               }
+           else if(response == JOptionPane.NO_OPTION){
+              return;
+           }
 
     }//GEN-LAST:event_jButton3ActionPerformed
 

@@ -219,13 +219,14 @@ public class Edit extends javax.swing.JFrame {
             ResultSet isInserted = sc.selectDetails();
             
             if(isInserted.next()){
-                String fname = isInserted.getString(1);
-                String lname = isInserted.getString(2);
-                String pass = isInserted.getString(6);
+                String fname1 = isInserted.getString(1);
+                String lname1 = isInserted.getString(2);
+                String pass1 = isInserted.getString(3);
 
-            //     fname.setText(fname);
-            //     lname.setText(lname);
-            //    pass.setText(pass);
+                fname.setText(fname1);
+                lname.setText(lname1);
+               password.setText(pass1);
+               repass.setText(pass1);
                 
             }
         } catch (Exception e) {

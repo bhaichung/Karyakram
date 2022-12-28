@@ -140,7 +140,6 @@ UserController uc = new UserController();
 int rs = uc.updateFeedback(u1);        
 JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
 
-        dispose(); 
 // TODO add your handling code here:
     }//GEN-LAST:event_sumbitActionPerformed
 
@@ -157,8 +156,14 @@ JOptionPane.showMessageDialog(this, "Thankyou For the Feedback");
 
     private void deleteFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteFeedActionPerformed
         // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Are you sure you want to Delete?","Confirm",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+      if (response==JOptionPane.YES_NO_OPTION){
         UserController uc = new UserController();
-        int rs = uc.deleteFeedback();
+        int rs = uc.deleteFeedback();      }
+    else if (response == JOptionPane.CANCEL_OPTION){
+        dispose();}
+        
+
         dispose();
     }//GEN-LAST:event_deleteFeedActionPerformed
     public void view(){
