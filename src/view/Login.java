@@ -62,7 +62,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); ///NOI18N
         jLabel3.setText("Password");
 
         jButton1.setBackground(new java.awt.Color(102, 102, 255));
