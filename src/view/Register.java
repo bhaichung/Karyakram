@@ -245,7 +245,25 @@ public class Register extends javax.swing.JFrame {
         null,
         " Please enter same password and confirm password"
       );
-    } else {
+    } 
+    else if(!emailValid.emailVerify(email)){
+        JOptionPane.showMessageDialog(null, "Please enter valid email");
+    }
+    else if(!phoneValid.phoneVerify(phone)){
+        JOptionPane.showMessageDialog(null, "Please enter valid phone number");
+    }
+  
+    else if(!nameValid.nameVerify(fname)){
+        JOptionPane.showMessageDialog(null, "Please enter valid first name");
+    }
+    else if(!nameValid.nameVerify(lname)){
+        JOptionPane.showMessageDialog(null, "Please enter valid last name");
+    }
+    else if(!nameValid.nameVerify(sq)){
+        JOptionPane.showMessageDialog(null, "Please enter valid security question");
+    }
+   
+    else {
       try {
         User u1 = new User(
           firstNameText.getText(),
@@ -261,6 +279,7 @@ public class Register extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(null, " Register Success");
                   new Login().setVisible(true);   
                   dispose();   
+                  // new Login().setVisible(true);      
         } else {
           JOptionPane.showMessageDialog(null, "Not successful");
         }
@@ -269,7 +288,6 @@ public class Register extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, e);
       }
     }
-            new Login().setVisible(true);      
   }//GEN-LAST:event_jButton2ActionPerformed
    // TODO add your handling code here:
   private void confirmPasswordTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmPasswordTextActionPerformed

@@ -35,6 +35,12 @@ public class UserController {
         ResultSet rs = dbConnection.retrieve(query);
         return rs;
     }
+    public ResultSet selectName(){
+        String query = "select concat(fname,'"+" "+"',lname) from User where status='"+"active"+"' ";
+        dbConnection = new DbConnection();
+        ResultSet rs = dbConnection.retrieve(query);
+        return rs;
+    }
 
     public ResultSet loginDetails(User user){
         String email = user.getUser_email();
@@ -52,29 +58,33 @@ public class UserController {
         return rs;
     }
 
-    public int changeStatus(User user){
+    public int changeStatus(){
         String query = "update User set status='"+"inactive"+"'";
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(query);
         return result;
-
-
-
     }
+    public int logout(){
+        String query = "update User set status='"+"inactive"+"'where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(query);
+        return result;
+    }
+    
+    public int deleteAccount(){
+        String delquery = "delete from User where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(delquery);
+        return result;
+    }
+
     public int updateStatus(User user){
         String email = user.getUser_email();
         String query = "update User set status='"+"active"+"' where email='"+email+"'";
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(query);
         return result;
-
-
-
     }
-
-    
-    
-
     public int updatedetails(User user) {
         String fname = user.getUser_fname();
         String lname = user.getUser_lname();
@@ -110,6 +120,14 @@ public class UserController {
 
     }
 
+    public int deleteFeedback(){
+        String deleteFeedbacks = "update User set feedback='"+""+"'where status='"+"active"+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(deleteFeedbacks);
+        return result;
+
+    }
+
 
 
     public int notification(User user){
@@ -126,6 +144,20 @@ public class UserController {
         return result;
     }
 
+    public int deleteBillEmail(String email){
+        String deleteQuery = "delete from bill where email='"+email+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(deleteQuery);
+        return result;
+    }
 
+    public int deleteBookingEmail(String email){
+        String deleteQuery = "delete from booking where email='"+email+"'";
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(deleteQuery);
+        return result;
+    }
+
+    
     
 }

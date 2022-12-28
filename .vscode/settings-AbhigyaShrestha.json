@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "gradient-dropdown-menu.jar",
+        "TimingFramework-0.55.jar",
+        "miglayout-4.0.jar"
+    ]
+}
