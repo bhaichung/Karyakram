@@ -245,25 +245,7 @@ public class Register extends javax.swing.JFrame {
         null,
         " Please enter same password and confirm password"
       );
-    } 
-    else if(!emailValid.emailVerify(email)){
-        JOptionPane.showMessageDialog(null, "Please enter valid email");
-    }
-    else if(!phoneValid.phoneVerify(phone)){
-        JOptionPane.showMessageDialog(null, "Please enter valid phone number");
-    }
-  
-    else if(!nameValid.nameVerify(fname)){
-        JOptionPane.showMessageDialog(null, "Please enter valid first name");
-    }
-    else if(!nameValid.nameVerify(lname)){
-        JOptionPane.showMessageDialog(null, "Please enter valid last name");
-    }
-    else if(!nameValid.nameVerify(sq)){
-        JOptionPane.showMessageDialog(null, "Please enter valid security question");
-    }
-   
-    else {
+    } else {
       try {
         User u1 = new User(
           firstNameText.getText(),

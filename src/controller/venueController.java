@@ -21,10 +21,9 @@ public class venueController {
         return result;
     }
     public ResultSet selectVenueName(Venue venue){
-        String query = "select v_id,price from venue where v_name='"+venue.getV_name()+"'";
+        String query = "select v_name,price from venue where v_name='"+venue.getV_name()+"'";
         dbConnection = new DbConnection();
         ResultSet result = dbConnection.retrieve(query);
         return result;
     }
-
 }

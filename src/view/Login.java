@@ -189,12 +189,12 @@ public class Login extends javax.swing.JFrame {
     try {
         if(rs.next()){
             JOptionPane.showMessageDialog(this, "Login Success");
-            uc.changeStatus();
+            uc.changeStatus(u1);
             uc.updateStatus(u1);
             uc.notification(u1);
-            new userDashboardLoggedIn().setVisible(true);
-        
             dispose();
+            //yetabata vopygarne
+            new userDashboardLoggedIn().setVisible(true);
         
         } else {
             JOptionPane.showMessageDialog(this,"Either email or password is invalid","Error" ,JOptionPane.ERROR_MESSAGE);
