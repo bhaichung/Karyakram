@@ -67,12 +67,12 @@ public class editFeedback extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void doneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneActionPerformed
-        // TODO add your handling code here:
         String editFeedbackString = editFeedback.getText();
 
         User u1 = new User(null,null, null, null,null,null,editFeedbackString,null,null,null);
         UserController uc = new UserController();
         int result = uc.editFeedback(u1);
+        //message box
         if(result>0){
         dispose();
             JOptionPane.showMessageDialog(this, "Updated Success");
