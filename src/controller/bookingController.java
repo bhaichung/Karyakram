@@ -70,5 +70,12 @@ public class bookingController {
 
     }
 
+    public ResultSet selectTotal(){
+        String query = "select sum(booking.total) from booking join User on booking.email=User.email where User.status='active'";
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(query);
+        return result;
+    }
+
     
 }

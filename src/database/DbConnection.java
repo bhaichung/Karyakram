@@ -72,7 +72,8 @@ public class DbConnection {
 
         }catch (SQLIntegrityConstraintViolationException ex){
 
-            JOptionPane.showMessageDialog(null, "These details already exist!");
+            // JOptionPane.showMessageDialog(null, "These details already exist!");
+            JOptionPane.showMessageDialog(null, ex);
 
         }catch (SQLException e){
 
