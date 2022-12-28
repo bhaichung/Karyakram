@@ -94,7 +94,7 @@ public class feedback extends javax.swing.JFrame {
         feed.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         feed.setToolTipText("");
         feed.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel1.add(feed, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 210, 20));
+        jPanel1.add(feed, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 210, 20));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
