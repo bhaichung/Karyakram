@@ -72,6 +72,7 @@ public class editFeedback extends javax.swing.JFrame {
         User u1 = new User(null,null, null, null,null,null,editFeedbackString,null,null,null);
         UserController uc = new UserController();
         int result = uc.editFeedback(u1);
+        //message box
         if(result>0){
         dispose();
             JOptionPane.showMessageDialog(this, "Updated Success");
