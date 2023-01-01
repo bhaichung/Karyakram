@@ -4,8 +4,12 @@
  */
 package view;
 
+import java.sql.ResultSet;
+
 import javax.swing.JOptionPane;
 
+import controller.BillController;
+import models.Bill;
 import view.userDashboardLoggedIn;
 
 /**
@@ -35,11 +39,11 @@ public class advPayement extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        recivertf = new javax.swing.JTextField();
+        nametf = new javax.swing.JTextField();
+        totaltf = new javax.swing.JTextField();
+        paidtf = new javax.swing.JTextField();
+        remainigtf = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -61,17 +65,17 @@ public class advPayement extends javax.swing.JFrame {
 
         jLabel5.setText("Reciver Name : ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 140, -1));
+        getContentPane().add(recivertf, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 140, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nametf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nametfActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 160, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 140, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 150, -1));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 110, -1));
+        getContentPane().add(nametf, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 160, -1));
+        getContentPane().add(totaltf, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 140, -1));
+        getContentPane().add(paidtf, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 150, -1));
+        getContentPane().add(remainigtf, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 110, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -97,9 +101,9 @@ public class advPayement extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void nametfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nametfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_nametfActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     JOptionPane.showMessageDialog(this,"Sucessfully Paid");
@@ -108,6 +112,24 @@ public class advPayement extends javax.swing.JFrame {
     new userDashboardLoggedIn().setVisible(true);
 
     }//GEN-LAST:event_jButton1ActionPerformed
+    public void view(){
+        try{
+        Bill b1 = new Bill(null,null,null,null,null,null,null);
+        BillController bc = new BillController();
+        ResultSet isInserted = bc.display();
+        if(isInserted.next()){
+            String name1 = isInserted.getString(1);
+            String total1 = isInserted.getString(2);
+            String paid1 = isInserted.getString(3);
+            String remaining1 = isInserted.getString(4);
+            String raciver_name1 = isInserted.getString(5);
+        }
+
+    }
+    catch (Exception e){
+        e.printStackTrace();
+    }
+}
 
     /**
      * @param args the command line arguments
@@ -153,10 +175,10 @@ public class advPayement extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField nametf;
+    private javax.swing.JTextField paidtf;
+    private javax.swing.JTextField recivertf;
+    private javax.swing.JTextField remainigtf;
+    private javax.swing.JTextField totaltf;
     // End of variables declaration//GEN-END:variables
 }

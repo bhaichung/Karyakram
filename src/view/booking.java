@@ -23,6 +23,8 @@ import models.hire;
  * @author acer
  */
 public class booking extends javax.swing.JFrame {
+    // private String name;
+
 
     /**
      * Creates new form booking
@@ -552,6 +554,13 @@ public class booking extends javax.swing.JFrame {
             while(rs.next()){
                 item = rs.getString(1);
                 hireCombo.addItem(item);
+                ResultSet rs2 = new HireController().selectHireStatus();
+                while(rs2.next()){
+                    String name = rs2.getString(1);
+                    hireCombo.setSelectedItem(name);
+                }
+                
+                // System.out.println(name);
             }
         } catch (Exception e) {
             // TODO: handle exception
