@@ -5,10 +5,12 @@
 package view;
 
 import java.sql.ResultSet;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.JOptionPane;
 
-import controller.BillController;
+import controller.*;
 import models.Bill;
 import view.userDashboardLoggedIn;
 
@@ -23,6 +25,7 @@ public class advPayement extends javax.swing.JFrame {
      */
     public advPayement() {
         initComponents();
+       view();
     }
 
     /**
@@ -39,7 +42,7 @@ public class advPayement extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        recivertf = new javax.swing.JTextField();
+        datetf = new javax.swing.JTextField();
         nametf = new javax.swing.JTextField();
         totaltf = new javax.swing.JTextField();
         paidtf = new javax.swing.JTextField();
@@ -63,9 +66,9 @@ public class advPayement extends javax.swing.JFrame {
         jLabel4.setText("Remaining Amount :");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
-        jLabel5.setText("Reciver Name : ");
+        jLabel5.setText("Date : ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
-        getContentPane().add(recivertf, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 140, -1));
+        getContentPane().add(datetf, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 170, -1));
 
         nametf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +77,24 @@ public class advPayement extends javax.swing.JFrame {
         });
         getContentPane().add(nametf, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 160, -1));
         getContentPane().add(totaltf, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 140, -1));
+
+        paidtf.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                paidtfFocusLost(evt);
+            }
+        });
+        paidtf.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                paidtfInputMethodTextChanged(evt);
+            }
+        });
+        paidtf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paidtfActionPerformed(evt);
+            }
+        });
         getContentPane().add(paidtf, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 150, -1));
         getContentPane().add(remainigtf, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 110, -1));
 
@@ -106,30 +127,97 @@ public class advPayement extends javax.swing.JFrame {
     }//GEN-LAST:event_nametfActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    JOptionPane.showMessageDialog(this,"Sucessfully Paid");
+        // TODO add your handling code here:
+        String email = null;
 
-    dispose();
+        int total = Integer.parseInt(totaltf.getText());
+        int paid = Integer.parseInt(paidtf.getText());
+        int remaining = Integer.parseInt(remainigtf.getText());
+        String date = datetf.getText();
+        try{
+            ResultSet rs = new UserController().selectEmail();
+            while(rs.next()){
+                email = rs.getString(1);
+            }
+            Bill b = new Bill(0,email,total,paid,remaining,date,null);
+            BillController bc = new BillController();
+            // b.setName(name);
+            int result = bc.insertDetails(b);
+            if(result>0){
+                JOptionPane.showMessageDialog(this,"Sucessfully Paid");
+                dispose();
     new userDashboardLoggedIn().setVisible(true);
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    // JOptionPane.showMessageDialog(this,"Sucessfully Paid");
+
+    
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void paidtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paidtfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_paidtfActionPerformed
+
+    private void paidtfInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_paidtfInputMethodTextChanged
+        // TODO add your handling code here:
+        remaining();
+    }//GEN-LAST:event_paidtfInputMethodTextChanged
+
+    private void paidtfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_paidtfFocusLost
+      remaining();
+    }//GEN-LAST:event_paidtfFocusLost
     public void view(){
         try{
-        Bill b1 = new Bill(null,null,null,null,null,null,null);
-        BillController bc = new BillController();
-        ResultSet isInserted = bc.display();
-        if(isInserted.next()){
-            String name1 = isInserted.getString(1);
-            String total1 = isInserted.getString(2);
-            String paid1 = isInserted.getString(3);
-            String remaining1 = isInserted.getString(4);
-            String raciver_name1 = isInserted.getString(5);
+        String name = null;
+        String date = null;
+        String total = null;
+
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");  
+   LocalDateTime now = LocalDateTime.now();
+   date = dtf.format(now);
+        // ResultSet isInserted = bc.display();
+        ResultSet userRs = new UserController().selectName();
+        while(userRs.next()){
+            name = userRs.getString(1);
         }
+        ResultSet bookingRs = new bookingController().selectTotal();
+        while(bookingRs.next()){
+            total = bookingRs.getString(1);
+        }
+        ResultSet rs = new BillController().selectDetails();
+        while(rs.next()){
+            int paid =Integer.parseInt(rs.getString(1));
+            total = Integer.toString(Integer.parseInt(total) - paid);
+
+        }
+        nametf.setText(name);
+        datetf.setText(date);
+        totaltf.setText(total);
+
+
+
+        
+       
 
     }
     catch (Exception e){
         e.printStackTrace();
     }
 }
+
+public void remaining(){
+    int total = Integer.parseInt(totaltf.getText());
+    int paid = Integer.parseInt(paidtf.getText());
+    int remaining = total - paid;
+    remainigtf.setText(String.valueOf(remaining));
+}
+
+    
+
 
     /**
      * @param args the command line arguments
@@ -167,6 +255,7 @@ public class advPayement extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField datetf;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -177,7 +266,6 @@ public class advPayement extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nametf;
     private javax.swing.JTextField paidtf;
-    private javax.swing.JTextField recivertf;
     private javax.swing.JTextField remainigtf;
     private javax.swing.JTextField totaltf;
     // End of variables declaration//GEN-END:variables
